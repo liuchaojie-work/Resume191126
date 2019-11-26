@@ -1,0 +1,233 @@
+@charset "UTF-8";
+a {
+    color:#C40B00;
+}
+
+.wrap{
+    max-width: 1000px;
+}
+
+/*侧边栏*/
+.sidebar{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: #FFF;
+    width: 250px;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    background: #3c3f41;
+}
+
+/* 头像 */
+.sidebar .avatar{
+    width: 160px;
+    height: 160px;
+    margin: 2em auto;
+    background: #FFF;
+    border-radius: 100%;
+    border: #f1ffc1 5px solid;
+    transition: transform 0.5s;
+}
+.sidebar .avatar:hover{
+    transform: rotate(1turn);
+}
+.sidebar .avatar img{
+    border-radius: 100%;
+}
+
+/* 侧边栏  */
+.sidebar .nav{
+    margin: 0 ;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+.sidebar .nav a{
+    color: #FFF;
+    padding: 1em;
+    display: block;
+    text-align: center;
+    transition: background .3s,box-shadow .3s;
+}
+.sidebar .nav a:hover{
+    background: rgba(0,0,0,.2);
+}
+main{
+    margin-left: 250px;
+}
+@media screen and (max-width: 900px){
+    .sidebar{
+        width: inherit;
+        position: relative;
+    }
+    .sidebar .nav{
+        background: #f8bd24;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .sidebar .nav a:hover{
+        background: none;
+        box-shadow: 0 -3px 0 #FFF inset;
+    }
+    main{
+        margin-left: 0;
+    }
+}
+@media print {
+    .sidebar{
+        display: none;
+    }
+    main{
+        margin-left: 0;
+    }
+}
+
+/* 正文*/
+main section{
+    padding: 5em 0;
+    position: relative;
+}
+@media screen and (max-width: 900px){
+    main section{
+        padding: 3em 0;
+    }
+}
+
+#info{background: #feffeb;}
+#story{background: #c2c2b2;}
+#skills{background: #f8c897;}
+#works{background: #998d5c;}
+#evaluate{background: #90a938;}
+
+
+.title{
+    margin-bottom: 1em;
+}
+.title:before{
+    float: left;
+    margin-right: .5em;
+    font-family: "FontAwesome";
+}
+
+/* 个人资料*/
+#info .title:before{
+    content: "\f005";
+}
+#story .title:before{
+    content: "\f0b1";
+}
+#skills .title:before{
+    content: "\f19d";
+}
+#works .title:before{
+    content: "\f091";
+}
+#evaluate .title:before{
+    content: "\f024";
+}
+
+/* 技能*/
+.skills-icon{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: 0 5px rgba(0,0,0,0.3);
+}
+.skills-icon:hover i{
+    transform: rotate(1turn);
+}
+.skills-icon i{
+    font-size: 50px;
+    line-height: 100px;
+    transition: transform 0.5s;
+}
+.skills-title{
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+/*作品*/
+.works-item img{
+    transition: transform 0.3s;
+}
+.works-item img:hover{
+    transform: scale(1.05, 1.05);
+}
+.works-item p{
+    padding: 1em 0;
+    text-align: center;
+}
+
+
+/* 经历*/
+/*
+.story{
+    list-style: none;
+    margin-left: 1em;
+    padding-left: 1.5em;
+
+}
+.story li{
+    line-height: 1.5em;
+    position: relative;
+    margin-bottom: 1.5em;
+}
+.story li:hover:before{
+    transform: scale(1.2, 1.2);
+}
+.story li:before{
+    content: "";
+    left: -2.3em;
+    width: 1.5em;
+    height: 1.5em;
+    display: block;
+    position: absolute;
+    background: #f8bd24;
+    border-radius: 100%;
+    transition: transform .3s;
+}
+
+
+ */
+.timeline{
+    list-style: none;
+    margin-left: 1em;
+    padding-left: 1.5em;
+    border-left: 2px grey solid;
+}
+
+.timeline li{
+    line-height: 1.5em;
+    position: relative;
+    margin-bottom: 1.5em;
+}
+.timeline li:hover:before{
+    transform: scale(1.2, 1.2);
+}
+.timeline li:before{
+    content: "";
+    left: -2.3em;
+    width: 1.5em;
+    height: 1.5em;
+    display: block;
+    position: absolute;
+    background: #f8bd24;
+    border-radius: 100%;
+    transition: transform .3s;
+}
+
+
+/* 页尾 */
+footer{
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    background: #72655b;
+}
+footer a{
+    color: inherit;
+}
